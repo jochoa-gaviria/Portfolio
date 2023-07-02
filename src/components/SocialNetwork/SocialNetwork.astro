@@ -1,0 +1,19 @@
+---
+import '../../styles/socialNetwork.css'
+
+export interface Props {
+    name: string;
+    icon: string;
+    url: string;
+}
+
+const { name, icon, url } = Astro.props;
+---
+
+<li>
+    <a href={url} target="_blank"
+        ><i class="{incon}" @click="goToUrl(url)"
+            ><img src={icon} alt={name} /></i
+        ></a
+    >
+</li>

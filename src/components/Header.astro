@@ -1,5 +1,6 @@
 ---
 import "../styles/header.css";
+import SocialNetworks from "./SocialNetwork/SocialNetworks.astro";
 
 export interface Props {
     name: string;
@@ -33,26 +34,9 @@ const { name, occupation } = Astro.props;
                             </div>
                             <h1><span>{name}</span></h1>
                             <h3><span>{occupation}</span></h3>
-                            <!-- <p>
-                                <ul class="fh5co-social-icons">
-                                    <li>
-                                        <a href="#"
-                                            ><i class="icon-twitter2"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            ><i class="icon-facebook2"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            ><i class="icon-linkedin2"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            ><i class="icon-dribbble2"></i></a>
-                                    </li>
-                                </ul>
-                            </p> -->
+                            <p>
+                                <SocialNetworks />
+                            </p>
                         </div>
                     </div>
                 </div>
