@@ -1,0 +1,42 @@
+---
+
+import '../../styles/social-networks.css'
+import SocialNetwork from "./SocialNetwork.astro";
+import linkedinSVG from "../../svg/linkedin.svg";
+import whatsappSVG from "../../svg/whatsapp.svg";
+import githubSVG from "../../svg/github.svg";
+
+
+const socialNetworks = [
+    {
+        name: "linkedin",
+        icon: linkedinSVG,
+        url: "https://linkedin.com/in/jochoa-gaviria/"
+    },
+    {
+        name: "github",
+        icon: githubSVG,
+        url: "https://github.com/jochoa-gaviria"
+    },
+    {
+        name: "whatsapp",
+        icon: whatsappSVG,
+        url: "https://wa.me/573117437028"
+    }
+]
+
+---
+
+<p>
+    <ul class="social-icons">
+        {
+            socialNetworks.map(({name, icon, url}):any => (
+                <SocialNetwork
+                    name={name}
+                    icon={icon}
+                    url={url}
+                />
+            ))
+        }
+    </ul>
+</p>

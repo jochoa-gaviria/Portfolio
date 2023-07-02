@@ -1,6 +1,6 @@
 ---
 import "../styles/header.css";
-import SocialNetworks from "./SocialNetwork/SocialNetworks.astro";
+import SocialNetworks from "./social-network/SocialNetworks.astro";
 
 export interface Props {
     name: string;
@@ -15,7 +15,7 @@ const { name, occupation } = Astro.props;
         id="header"
         class="cover js-fullheight"
         role="banner"
-        style="background-image:url(/public/images/cover_bg_3.jpg);"
+        style="background-image:url(/images/cover_bg_1.jpg);"
         data-stellar-background-ratio="0.5"
     >
         <div class="overlay"></div>
@@ -29,7 +29,7 @@ const { name, occupation } = Astro.props;
                         >
                             <div
                                 class="profile-thumb"
-                                style="background: url(/public/images/user.jpg);"
+                                style="background: url(/images/user.jpg);"
                             >
                             </div>
                             <h1><span>{name}</span></h1>
