@@ -1,6 +1,65 @@
 ---
+import type { iresumeItem } from '../../interfaces/resumeItem'
 import ResumeItem from "./ResumeItem.astro";
-import WorkSVG from "../../svg/work.svg"
+import WorkSVG from "../../svg/work.svg";
+
+
+const workExperience: iresumeItem[] = [
+    {
+        title: "FullStack Software Developer",
+        institutionName: "Visionamos",
+        startDate: new Date("2022-10-01"),
+        finishDate: undefined,
+        description: "Develop user histories, new features, fix bugs and incidents, Develop test cases, tecnical documentation.",
+        icon: WorkSVG,
+        inverted: false,
+    },
+    {
+        title: "Requirements Analiyst IT",
+        institutionName: "Visionamos",
+        startDate: new Date("2020-12-01"),
+        finishDate: new Date("2022-09-31"),
+        description: "Sprint and Backlogs - Development management, Projects and Requirements analysis, tecnical documentation.",
+        icon: WorkSVG,
+        inverted: true,
+    },
+    {
+        title: "Customer Service Analyst",
+        institutionName: "Visionamos",
+        startDate: new Date("2020-07-01"),
+        finishDate: new Date("2020-11-30"),
+        description: "Tecnical Support - Level 2, IT Requirements Analysis and Scaling, Support trainer.",
+        icon: WorkSVG,
+        inverted: false,
+    },
+    {
+        title: "Customer Service Auxiliary",
+        institutionName: "Visionamos",
+        startDate: new Date("2018-06-18"),
+        finishDate: new Date("2020-06-30"),
+        description: "Tecnical Support - Level 1, Adressing to application incidents.",
+        icon: WorkSVG,
+        inverted: true,
+    },
+    {
+        title: "Software Developer",
+        institutionName: "Self-employed",
+        startDate: new Date("2018-03-01"),
+        finishDate: new Date("2018-06-20"),
+        description: "Inventory management software (S.A.R) on a lawyers office. The software was build using Arduino, RFID cards for representing phisical files.",
+        icon: WorkSVG,
+        inverted: false,
+    },
+    {
+        title: "Computer Security Trainee",
+        institutionName: "Visionamos",
+        startDate: new Date("2017-12-18"),
+        finishDate: new Date("2018-06-17"),
+        description: "Risk events analysis, Network's and App's vulnerabilities analysis, User management support.",
+        icon: WorkSVG,
+        inverted: true,
+    }
+];
 ---
 
 <section>
@@ -9,70 +68,27 @@ import WorkSVG from "../../svg/work.svg"
             <h3>Work Experience</h3>
         </div>
     </li>
-    <ResumeItem
-        title="Software Dev"
-        institutionName="Visionamos"
-        startDate="2020"
-        finishDate="2023"
-        description="Developer...."
-        icon={WorkSVG}
-        inverted={false}
-    />
-    <ResumeItem
-        title="Software Dev"
-        institutionName="Visionamos"
-        startDate="2020"
-        finishDate="2023"
-        description="Developer...."
-        icon={WorkSVG}
-        inverted={true}
-    />
-    <!-- <li class="animate-box timeline-unverted">
-        <div class="timeline-badge"><i class="icon-suitcase"></i></div>
-        <div class="timeline-panel">
-            <div class="timeline-heading">
-                <h3 class="timeline-title">Senior Developer</h3>
-                <span class="company">Company Name - 2016 - Current</span>
-            </div>
-            <div class="timeline-body">
-                <p>
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts.
-                </p>
-            </div>
-        </div>
-    </li>
-    <li class="timeline-inverted animate-box">
-        <div class="timeline-badge"><i class="icon-suitcase"></i></div>
-        <div class="timeline-panel">
-            <div class="timeline-heading">
-                <h3 class="timeline-title">Junior Developer</h3>
-                <span class="company">Company Name - 2013 - 2015</span>
-            </div>
-            <div class="timeline-body">
-                <p>
-                    Far far away, behind the word mountains, they live in
-                    Bookmarksgrove right at the coast of the Semantics, a large
-                    language ocean.
-                </p>
-            </div>
-        </div>
-    </li>
-    <li class="animate-box timeline-unverted">
-        <div class="timeline-badge"><i class="icon-suitcase"></i></div>
-        <div class="timeline-panel">
-            <div class="timeline-heading">
-                <h3 class="timeline-title">UI/UX Designer</h3>
-                <span class="company">Company Name - 2010 - 2012</span>
-            </div>
-            <div class="timeline-body">
-                <p>
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts.
-                </p>
-            </div>
-        </div>
-    </li> -->
+    {
+        workExperience.map(
+            ({
+                title,
+                institutionName,
+                startDate,
+                finishDate,
+                description,
+                icon,
+                inverted,
+            }): iresumeItem => (
+                <ResumeItem
+                    title={title}
+                    institutionName={institutionName}
+                    startDate={startDate}
+                    finishDate={finishDate}
+                    description={description}
+                    icon={icon}
+                    inverted={inverted}
+                />
+            )
+        )
+    }
 </section>
