@@ -1,20 +1,25 @@
 ---
 
+import PresentationItem from "./PresentationItem.astro";
+
+const items = [
+    "I am a Sofware Engineer with leadership abilities, agile methodologies adoption. Passionated by technological solutions design and development.",
+    "Knowledge and experience as Full-Stack Developer, using C# and .NET Core, Python and Django, JavaScript with NodeJS and ExpressJS as Back-End technologies. In Front-End I've worked with JavaScript, TypeScript and ReactJS, Experience with HTML5, CSS and CSS frameworks.",
+    "Expertise using relational databases as SQL, SQL Server, MySQL, SQLite and T-SQL. Also, experience with no relational database as MongoDB. Experience implementing and working with queuing systems as Hangfire and RabbitMQ.",
+    "Strong abilities with collaborative work tools as Git, GitHub, GitLab, Team Foundation Server and Azure DevOps. Knowledge with DevOps cultures and scrum methodologies. ",
+    "Technical knowledge in financial sector as banks and fintechs, and also with Open Banking architecture."
+]
+
+
 ---
 
 <h2>Hello There!</h2>
-<p>
-    I am a Sofware Engineer with leadership abilities, agile methodologies adoption. Passionated by technological solutions design and development.
-</p>
-<p>
-    Knowledge and experience as Full-Stack Developer, using C# and .NET Core, Python and Django, JavaScript with NodeJS and ExpressJS as Back-End technologies. In Front-End I’ve worked with JavaScript, TypeScript and ReactJS, Experience with HTML5, CSS and CSS frameworks.
-</p>
-<p>
-    Expertise using relational databases as SQL, SQL Server, MySQL, SQLite and T-SQL. Also, experience with no relational database as MongoDB. Experience implementing and working with queuing systems as Hangfire and RabbitMQ.
-</p>
-<p>
-    Strong abilities with collaborative work tools as Git, GitHub, GitLab, Team Foundation Server and Azure DevOps. Knowledge with DevOps cultures and scrum methodologies. 
-</p>
-<p>
-    Technical knowledge in financial sector as banks and fintechs, and also with Open Banking architecture.
-</p>
+<article>
+    {
+        items.map((item:string) => (
+            <PresentationItem
+                text={item}
+            />
+        ))
+    }
+</article>

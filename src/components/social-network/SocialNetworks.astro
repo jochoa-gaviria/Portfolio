@@ -6,6 +6,11 @@ import linkedinSVG from "../../svg/linkedin.svg";
 import whatsappSVG from "../../svg/whatsapp.svg";
 import githubSVG from "../../svg/github.svg";
 
+interface socialNetwork {
+    name: string,
+    icon: string,
+    url: string
+}
 
 const socialNetworks = [
     {
@@ -30,7 +35,7 @@ const socialNetworks = [
 <p>
     <ul class="social-icons">
         {
-            socialNetworks.map(({name, icon, url}):any => (
+            socialNetworks.map(({name, icon, url}):socialNetwork => (
                 <SocialNetwork
                     name={name}
                     icon={icon}

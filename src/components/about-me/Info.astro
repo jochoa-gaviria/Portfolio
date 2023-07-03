@@ -1,23 +1,41 @@
 ---
 import "../../styles/info.css";
-import CopyClipboardSVG from "../../svg/copy-clipboard.svg";
+import InfoItem from "./InfoItem.astro";
+
+interface item {
+    firstBlock: string;
+    secondBlock: string;
+}
+
+const items = [
+    {
+        firstBlock: "Full Name",
+        secondBlock: "Juan David Ochoa Gaviria",
+    },
+    {
+        firstBlock: "Phone",
+        secondBlock: "+57 311 743 7028",
+    },
+    {
+        firstBlock: "Email",
+        secondBlock: "jochoa.gaviria@hotmail.com",
+    },
+    {
+        firstBlock: "Location",
+        secondBlock: "Medellin, Colombia",
+    },
+];
 ---
 
 <ul class="info">
-    <li>
-        <span class="first-block">Full Name</span>
-        <span class="second-block">Juan David Ochoa Gaviria</span>
-    </li>
-    <li>
-        <span class="first-block">Phone</span>
-        <span class="second-block">+57 311 743 7028</span>
-    </li>
-    <li>
-        <span class="first-block">Email</span>
-        <span class="second-block">jochoa.gaviria@hotmail.com</span>
-    </li>
-    <li>
-        <span class="first-block">Location</span>
-        <span class="second-block">Medellin, Colombia</span>
-    </li>
+    {
+        items.map(
+            ({ firstBlock, secondBlock }): item => (
+                <InfoItem
+                    firstBlock={firstBlock}
+                    secondBlock={secondBlock}
+                />
+            )
+        )
+    }
 </ul>
