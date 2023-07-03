@@ -1,18 +1,14 @@
 ---
 
 import '../../styles/social-networks.css'
+import type { isocialNetwork } from '../../interfaces/socialNetwork';
 import SocialNetwork from "./SocialNetwork.astro";
 import linkedinSVG from "../../svg/linkedin.svg";
 import whatsappSVG from "../../svg/whatsapp.svg";
 import githubSVG from "../../svg/github.svg";
 
-interface socialNetwork {
-    name: string,
-    icon: string,
-    url: string
-}
 
-const socialNetworks = [
+const socialNetworks : isocialNetwork[] = [
     {
         name: "linkedin",
         icon: linkedinSVG,
@@ -35,7 +31,7 @@ const socialNetworks = [
 <p>
     <ul class="social-icons">
         {
-            socialNetworks.map(({name, icon, url}):socialNetwork => (
+            socialNetworks.map(({name, icon, url}):isocialNetwork => (
                 <SocialNetwork
                     name={name}
                     icon={icon}

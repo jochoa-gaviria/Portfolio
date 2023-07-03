@@ -1,12 +1,10 @@
 ---
 
 import '../../styles/info-item.css'
+import type { iinfoItem } from '../../interfaces/infoItem';
 import CopyClipboardSVG from "../../svg/copy-clipboard.svg";
 
-export interface Props {
-    firstBlock: string;
-    secondBlock: string;
-}
+export interface Props extends iinfoItem {}
 
 const { firstBlock, secondBlock } = Astro.props;
 ---

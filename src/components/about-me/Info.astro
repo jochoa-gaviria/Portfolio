@@ -1,13 +1,10 @@
 ---
 import "../../styles/info.css";
+import type { iinfoItem } from "../../interfaces/infoItem";
 import InfoItem from "./InfoItem.astro";
 
-interface item {
-    firstBlock: string;
-    secondBlock: string;
-}
 
-const items = [
+const items : iinfoItem[] = [
     {
         firstBlock: "Full Name",
         secondBlock: "Juan David Ochoa Gaviria",
@@ -30,7 +27,7 @@ const items = [
 <ul class="info">
     {
         items.map(
-            ({ firstBlock, secondBlock }): item => (
+            ({ firstBlock, secondBlock }): iinfoItem => (
                 <InfoItem
                     firstBlock={firstBlock}
                     secondBlock={secondBlock}

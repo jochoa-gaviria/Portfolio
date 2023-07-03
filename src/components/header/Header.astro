@@ -1,11 +1,9 @@
 ---
 import "../../styles/header.css";
+import type { iheader } from '../../interfaces/header'
 import SocialNetworks from "../social-network/SocialNetworks.astro";
 
-export interface Props {
-    name: string;
-    occupation: string;
-}
+export interface Props extends iheader {}
 
 const { name, occupation } = Astro.props;
 ---
