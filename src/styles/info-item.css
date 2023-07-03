@@ -21,3 +21,15 @@
     display: inline-block;
     color: rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (max-width: 768px) {
+    .info li .first-block {
+        width: 30%;
+        margin-bottom: 0px !important;
+    }
+    .info li .second-block {
+        width: 50%;
+        display: flex;
+        margin-bottom: 0px !important;
+    }
+}
