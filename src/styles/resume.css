@@ -1,50 +1,14 @@
 #resume {
   font-family: "Space Mono", Arial, serif;
-  padding: 5em 0;
+  padding: 7em 0;
   clear: both;
   min-height: 100vh;
-  /* background-color: rgba(222, 238, 237, 07); */
 }
 
-@media screen and (min-width: 280px) and (max-width: 359px) {
-  #resume {
-    margin-top: 200vh;
-    padding: 2em 0;
-  }
-}
 
-@media screen and (min-width: 360px) and (max-width: 389px) {
+@media screen and (max-width: 768px) {
   #resume {
-    margin-top: 145vh;
-    padding: 2em 0;
-  }
-}
-
-@media screen and (min-width: 390px) and (max-width: 413px) {
-  #resume {
-    margin-top: 80vh;
-    padding: 2em 0;
-  }
-}
-
-@media screen and (min-width: 414px) and (max-width: 499px) {
-  #resume {
-    margin-top: 75vh;
-    padding: 2em 0;
-  }
-}
-
-@media screen and (min-width: 500px) and (max-width: 550px) {
-  #resume {
-    margin-top: 85vh;
-    padding: 2em 0;
-  }
-}
-
-@media screen and (min-width: 550px) and (max-width: 1024px) {
-  #resume {
-    margin-top: 40vh;
-    padding: 2em 0;
+    padding: 3em 0;
   }
 }
 
@@ -122,4 +86,8 @@
     float: left;
     margin-bottom: 0;
   }
+}
+
+.js .animate-box {
+  opacity: 0;
 }
