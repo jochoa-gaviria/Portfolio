@@ -42,23 +42,15 @@ const formaleducationItems: iresumeItem[] = [
     </li>
     {
         formaleducationItems.map(
-            ({
-                title,
-                institutionName,
-                startDate,
-                finishDate,
-                description,
-                icon,
-                inverted,
-            }): iresumeItem => (
+            (educationItem): iresumeItem => (
                 <ResumeItem
-                    title={title}
-                    institutionName={institutionName}
-                    startDate={startDate}
-                    finishDate={finishDate}
-                    description={description}
-                    icon={icon}
-                    inverted={inverted}
+                    title={educationItem.title}
+                    institutionName={educationItem.institutionName}
+                    startDate={educationItem.startDate}
+                    finishDate={educationItem.finishDate}
+                    description={educationItem.description}
+                    icon={educationItem.icon}
+                    inverted={educationItem.inverted}
                 />
             )
         )

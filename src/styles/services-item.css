@@ -1,0 +1,57 @@
+.feature-left {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    float: center;
+}
+
+@media screen and (max-width: 992px) {
+    .feature-left {
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+}
+
+.feature-left .icon {
+    display: table;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: #fff;
+    margin-bottom: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.feature-left .icon i {
+    font-size: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100px;
+    color: #FF9000 !important;
+}
+
+.feature-left .feature-copy {
+    width: 100%;
+}
+
+.feature-left h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.feature-left p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.feature-left p:last-child {
+    margin-bottom: 0;
+}
+
+.feature-left p a {
+    color: #000 !important;
+}

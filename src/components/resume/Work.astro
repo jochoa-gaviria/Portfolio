@@ -1,4 +1,5 @@
 ---
+
 import type { iresumeItem } from '../../interfaces/resumeItem'
 import ResumeItem from './ResumeItem.astro';
 import WorkSVG from '../../../public/svg/work.svg';
@@ -60,6 +61,7 @@ const workExperience: iresumeItem[] = [
         inverted: true,
     }
 ];
+
 ---
 
 <section>
@@ -70,23 +72,15 @@ const workExperience: iresumeItem[] = [
     </li>
     {
         workExperience.map(
-            ({
-                title,
-                institutionName,
-                startDate,
-                finishDate,
-                description,
-                icon,
-                inverted,
-            }): iresumeItem => (
+            (workItem): iresumeItem => (
                 <ResumeItem
-                    title={title}
-                    institutionName={institutionName}
-                    startDate={startDate}
-                    finishDate={finishDate}
-                    description={description}
-                    icon={icon}
-                    inverted={inverted}
+                    title={workItem.title}
+                    institutionName={workItem.institutionName}
+                    startDate={workItem.startDate}
+                    finishDate={workItem.finishDate}
+                    description={workItem.description}
+                    icon={workItem.icon}
+                    inverted={workItem.inverted}
                 />
             )
         )

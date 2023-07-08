@@ -1,4 +1,5 @@
 ---
+
 import type { iresumeItem } from "../../interfaces/resumeItem";
 import "../../styles/resume-item.css";
 
@@ -28,6 +29,7 @@ const startDateFormatted = new Date(startDate).toLocaleDateString(
 const finishDateFormatted = finishDate
     ? new Date(finishDate).toLocaleDateString("en-CA", dateOptions)
     : undefined;
+
 ---
 
 <li class=`${inverted ? 'timeline-inverted' : 'timeline-unverted'} animate-box`>

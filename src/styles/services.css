@@ -1,0 +1,13 @@
+#features {
+    background: rgb(23, 107, 135);
+    min-height: 100vh;
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(23, 107, 135, 1) 28%); */
+}
+
+#features h2 {
+    color: #fff;
+}
+
+#features .services-padding {
+    padding: 7em 0;
+}

@@ -1,0 +1,74 @@
+---
+
+import '../../styles/global.css'
+import '../../styles/services.css'
+import ServicesItem from "./ServicesItem.astro";
+import type { iservice } from "../../interfaces/services";
+
+const services: iservice[][] = [
+    [
+        {
+            title: "Web Development",
+            description: "Frontend Development, Web Design, Layout, APIs usage.",
+            icon: "",
+        },
+        {
+            title: "Backend Development",
+            description: "API's and Microservices, Low level services, Linux/Windows services Development.",
+            icon: "",
+        },
+        {
+            title: "Mobile Development",
+            description: "Hybrid Apps Development, AppStore and Google PlayStore Deployment",
+            icon: "",
+        },
+    ],
+    [
+        {
+            title: "Software Design and Architecture",
+            description: "Architecture modeling and documentation. Proyects Design and Architecture.",
+            icon: "",
+        },
+        {
+            title: "Data Visualization",
+            description: "Data Visualization Apps Development",
+            icon: "",
+        },
+        {
+            title: "Support",
+            description: "Support for your Web Applications, APIs, Mobile Apps",
+            icon: "",
+        },
+    ],
+];
+
+---
+
+<main id="features" class="animate-box">
+    <div class="container">
+        <div class="services-padding">
+            <div class="row">
+                <div
+                    class="col-md-12 col-md-offset-2 text-center heading"
+                >
+                    <h2>My Services</h2>
+                </div>
+            </div>
+            {
+                services.map((servicesItems): iservice[] => (
+                    <div class="row">
+                        {servicesItems.map(
+                            (service): iservice => (
+                                <ServicesItem
+                                    title={service.title}
+                                    description={service.description}
+                                    icon={service.icon}
+                                />
+                            )
+                        )}
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</main>
