@@ -28,9 +28,14 @@
 .feature-left .icon i {
     font-size: 50px;
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: sub;
     height: 100px;
     color: #FF9000 !important;
+}
+
+.feature-left .icon i img {
+    font-size: 300px;
+    width: 60%;
 }
 
 .feature-left .feature-copy {

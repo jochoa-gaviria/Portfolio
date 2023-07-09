@@ -1,6 +1,6 @@
 #resume {
   font-family: "Space Mono", Arial, serif;
-  padding: 7em 0;
+  padding: 4em 0;
   clear: both;
   min-height: 100vh;
 }
@@ -8,7 +8,7 @@
 
 @media screen and (max-width: 768px) {
   #resume {
-    padding: 3em 0;
+    padding: 2em 0;
   }
 }
 

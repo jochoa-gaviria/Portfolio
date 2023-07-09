@@ -2,6 +2,12 @@
 
 import '../../styles/global.css'
 import '../../styles/services.css'
+import architectureSVG from "/svg/architecture.svg"
+import backendSVG from "/svg/backend-coding.svg"
+import frontendSVG from "/svg/frontend-coding.svg"
+import mobileSVG from "/svg/mobile-coding.svg"
+import supportSVG from "/svg/support.svg"
+import dataVisualizationSVG from "/svg/data-visualization.svg"
 import ServicesItem from "./ServicesItem.astro";
 import type { iservice } from "../../interfaces/services";
 
@@ -10,34 +16,34 @@ const services: iservice[][] = [
         {
             title: "Web Development",
             description: "Frontend Development, Web Design, Layout, APIs usage.",
-            icon: "",
+            icon: frontendSVG,
         },
         {
             title: "Backend Development",
             description: "API's and Microservices, Low level services, Linux/Windows services Development.",
-            icon: "",
+            icon: backendSVG,
         },
         {
             title: "Mobile Development",
             description: "Hybrid Apps Development, AppStore and Google PlayStore Deployment",
-            icon: "",
+            icon: mobileSVG,
         },
     ],
     [
         {
             title: "Software Design and Architecture",
             description: "Architecture modeling and documentation. Proyects Design and Architecture.",
-            icon: "",
+            icon: architectureSVG,
         },
         {
             title: "Data Visualization",
             description: "Data Visualization Apps Development",
-            icon: "",
+            icon: dataVisualizationSVG,
         },
         {
             title: "Support",
             description: "Support for your Web Applications, APIs, Mobile Apps",
-            icon: "",
+            icon: supportSVG,
         },
     ],
 ];
