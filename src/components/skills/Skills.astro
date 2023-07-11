@@ -1,6 +1,6 @@
 ---
-import '../../styles/global.css'
-import '../../styles/skills.css'
+import "../../styles/global.css";
+import "../../styles/skills.css";
 import ChartSkillItem from "./ChartSkillItem.astro";
 import ProgressWrapSkillItem from "./ProgressWrapSkillItem.astro";
 ---
@@ -13,7 +13,8 @@ import ProgressWrapSkillItem from "./ProgressWrapSkillItem.astro";
             </div>
         </div>
         <div id="technologies" class="row row-pb-md">
-            <ChartSkillItem />
+            <ChartSkillItem title="HTML5" porcent={15} />
+            <ChartSkillItem title="CSS" porcent={5} />
         </div>
         <div id="tools" class="row">
             <ProgressWrapSkillItem />

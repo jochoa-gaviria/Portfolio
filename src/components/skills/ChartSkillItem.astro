@@ -1,9 +1,30 @@
 ---
 import "../../styles/chart-skill-item.css";
+import { PieChart } from "react-minimal-pie-chart";
+import type { ichartSkillItem } from "../../interfaces/chartSkillItem";
+
+export interface Props extends ichartSkillItem {}
+
+const { title, porcent } = Astro.props;
 ---
 
 <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-    <div class="chart" data-percent="95">
-        <span><strong>HTML5</strong>95%</span>
+    <div class="chart">
+        <PieChart
+            data={[
+                { title: title, value: porcent, color: "#176B87" },
+                { title: title, value: 100 - porcent, color: "#E9F1F1" },
+            ]}
+            rounded
+            totalValue={100}
+            paddingAngle={porcent >= 100 || porcent <= 0 ? 0 : 15}
+            startAngle={270}
+            lineWidth={15}
+        />
+        <span
+            ><strong>{title}</strong>{
+                porcent != undefined ? porcent + "%" : ""
+            }</span
+        >
     </div>
 </div>
