@@ -1,0 +1,44 @@
+.chart {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 40px auto;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    /* border-radius: 50%; TODO: delete
+    background-repeat: no-repeat;
+    background-color: rgba(23, 107, 135, 0.86); */
+    /* background-image: */
+        /* linear-gradient(33deg,transparent 37%, green 0),      */
+        /* linear-gradient(-33deg, red 70%, blue 0%),      */
+        /* linear-gradient(to right, blue 50%, green 50%); */
+}
+
+.chart::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    bottom: 5px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.chart span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -30px;
+    width: 100%;
+}
+
+.chart span strong {
+    display: block;
+}
+
+.chart canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

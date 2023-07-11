@@ -1,0 +1,22 @@
+---
+import '../../styles/global.css'
+import '../../styles/skills.css'
+import ChartSkillItem from "./ChartSkillItem.astro";
+import ProgressWrapSkillItem from "./ProgressWrapSkillItem.astro";
+---
+
+<div id="skills" class="animate-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-2 text-center heading">
+                <h2>Skills</h2>
+            </div>
+        </div>
+        <div id="technologies" class="row row-pb-md">
+            <ChartSkillItem />
+        </div>
+        <div id="tools" class="row">
+            <ProgressWrapSkillItem />
+        </div>
+    </div>
+</div>
