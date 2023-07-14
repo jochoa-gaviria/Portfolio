@@ -8,7 +8,7 @@ export interface Props extends ichartSkillItem {}
 const { title, porcent } = Astro.props;
 ---
 
-<div class="col-md-3 col-sm-6 col-xs-12 text-center">
+<div class="col-md-3 col-sm-6 col-xs-12 text-center chart-container">
     <div class="chart">
         <PieChart
             data={[
@@ -18,9 +18,9 @@ const { title, porcent } = Astro.props;
             rounded
             totalValue={100}
             paddingAngle={porcent >= 100 || porcent <= 0 ? 0 : 15}
-            startAngle={270}
+            startAngle={273}
             lineWidth={15}
-        />
+        client:load/>
         <span
             ><strong>{title}</strong>{
                 porcent != undefined ? porcent + "%" : ""

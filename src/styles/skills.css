@@ -1,6 +1,7 @@
 #skills {
-    padding: 7em 0;
+    padding: 4em 0;
     clear: both;
+    min-height: 100vh;
 }
 
 @media screen and (max-width: 768px){

@@ -3,6 +3,134 @@ import "../../styles/global.css";
 import "../../styles/skills.css";
 import ChartSkillItem from "./ChartSkillItem.astro";
 import ProgressWrapSkillItem from "./ProgressWrapSkillItem.astro";
+import type { ichartSkillItem } from "../../interfaces/chartSkillItem";
+import type { iprogressWrapSkillItem } from "../../interfaces/progressWrapSkillItem";
+
+
+const chartSkills: ichartSkillItem[] = [
+    {
+        title: "C#",
+        porcent: 80
+    },
+    {
+        title: "Python",
+        porcent: 65
+    },
+    {
+        title: "GoLang",
+        porcent: 55
+    },
+    {
+        title: "JavaScript TypeScript",
+        porcent: 60
+    },
+    {
+        title: "Swift",
+        porcent: 35
+    },
+    {
+        title: "SQL Server",
+        porcent: 80
+    },
+    {
+        title: "Mongo DB",
+        porcent: 60
+    },
+    {
+        title: "Git",
+        porcent: 90
+    }
+]
+
+const wrapSkills: iprogressWrapSkillItem[] = [
+    {
+        title: ".NET",
+        porcent: 85,
+        style: 1,
+        group: 1
+    },
+    {
+        title: "django",
+        porcent: 70,
+        style: 1,
+        group: 1
+    },
+    {
+        title: "gofiber",
+        porcent: 65,
+        style: 1,
+        group: 1
+    },
+    {
+        title: "NodeJS",
+        porcent: 55,
+        style: 1,
+        group: 1
+    },
+    {
+        title: "ExpressJS",
+        porcent: 55,
+        style: 1,
+        group: 1
+    },
+    {
+        title: "ReactJS",
+        porcent: 50,
+        style: 2,
+        group: 2
+    },
+    {
+        title: "AstroJS",
+        porcent: 60,
+        style: 2,
+        group: 2
+    }
+    ,
+    {
+        title: "HTML5/CSS",
+        porcent: 55,
+        style: 2,
+        group: 2
+    },
+    {
+        title: "RabbitMQ",
+        porcent: 65,
+        style: 3,
+        group: 1
+    },
+    {
+        title: "Hangfire",
+        porcent: 65,
+        style: 3,
+        group: 1
+    },
+    {
+        title:  "Docker",
+        porcent: 60,
+        style: 3,
+        group: 2
+    },
+    {
+        title:  "GitHub",
+        porcent: 70,
+        style: 4,
+        group: 2
+    },
+    {
+        title:  "Azure DevOps",
+        porcent: 65,
+        style: 4,
+        group: 2
+    },
+    {
+        title:  "DevOps Culture",
+        porcent: 70,
+        style: 4,
+        group: 2
+    }
+]
+
+
 ---
 
 <div id="skills" class="animate-box">
@@ -13,11 +141,44 @@ import ProgressWrapSkillItem from "./ProgressWrapSkillItem.astro";
             </div>
         </div>
         <div id="technologies" class="row row-pb-md">
-            <ChartSkillItem title="HTML5" porcent={15} />
-            <ChartSkillItem title="CSS" porcent={5} />
+            {
+                chartSkills.map((skill):ichartSkillItem => (
+                    <ChartSkillItem 
+                        title={skill.title}
+                        porcent={skill.porcent}
+                    />
+                ))
+            }
         </div>
-        <div id="tools" class="row">
-            <ProgressWrapSkillItem />
+        <div class="row">
+            <div id="tools" class="row">
+                <div class="col-md-6">
+                    {
+                        wrapSkills.filter((skill):iprogressWrapSkillItem | undefined => {if (skill.group == 1) return skill})
+                        .map((skill):iprogressWrapSkillItem => (
+                            <ProgressWrapSkillItem
+                                title={skill.title}
+                                porcent={skill.porcent}
+                                style={skill.style}
+                                group={skill.group}
+                            />
+                        ))
+                    }
+                </div>
+                <div class="col-md-6">
+                    {
+                        wrapSkills.filter((skill):iprogressWrapSkillItem | undefined => {if (skill.group == 2) return skill})
+                        .map((skill):iprogressWrapSkillItem => (
+                            <ProgressWrapSkillItem
+                                title={skill.title}
+                                porcent={skill.porcent}
+                                style={skill.style}
+                                group={skill.group}
+                            />
+                        ))
+                    }
+                </div>
+            </div>
         </div>
     </div>
 </div>
