@@ -1,0 +1,40 @@
+---
+
+import "../../styles/info.css";
+import type { iinfoItem } from "../../interfaces/infoItem";
+import InfoItem from "./InfoItem.astro";
+
+
+const items : iinfoItem[] = [
+    {
+        firstBlock: "Full Name",
+        secondBlock: "Juan David Ochoa Gaviria",
+    },
+    {
+        firstBlock: "Phone",
+        secondBlock: "+57 311 743 7028",
+    },
+    {
+        firstBlock: "Email",
+        secondBlock: "jochoa.gaviria@hotmail.com",
+    },
+    {
+        firstBlock: "Location",
+        secondBlock: "Medellin, Colombia",
+    },
+];
+
+---
+
+<ul class="info">
+    {
+        items.map(
+            (infoItem): iinfoItem => (
+                <InfoItem
+                    firstBlock={infoItem.firstBlock}
+                    secondBlock={infoItem.secondBlock}
+                />
+            )
+        )
+    }
+</ul>

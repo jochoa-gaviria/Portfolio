@@ -1,0 +1,20 @@
+#about {
+    display: contents;
+    font-family: "Space Mono", Arial, serif;
+    padding: 7em 0;
+    clear: both;
+    height: 100vh;
+    background: rgb(238,238,237);
+    background: linear-gradient(180deg, rgba(238,238,237,1) 0%, rgba(255,255,255,1) 76%);
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        font-family: "Space Mono", Arial, serif;
+        padding: 3em 0;
+    }
+}
+
+.js .animate-box {
+    opacity: 0;
+}

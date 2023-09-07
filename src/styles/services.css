@@ -1,0 +1,12 @@
+#features {
+    background: rgb(23, 107, 135);
+    min-height: 100vh;
+}
+
+#features h2 {
+    color: #fff;
+}
+
+#features .services-padding {
+    padding: 4.5em 0;
+}

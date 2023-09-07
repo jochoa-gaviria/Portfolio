@@ -1,0 +1,52 @@
+---
+
+import type { iresumeItem } from "../../interfaces/resumeItem";
+import "../../styles/resume-item.css";
+
+export interface Props extends iresumeItem {}
+
+const {
+    title,
+    institutionName,
+    startDate,
+    finishDate,
+    description,
+    icon,
+    inverted,
+} = Astro.props;
+
+const dateOptions: object = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC"
+};
+
+const startDateFormatted = new Date(startDate).toLocaleDateString(
+    "en-CA",
+    dateOptions
+);
+const finishDateFormatted = finishDate
+    ? new Date(finishDate).toLocaleDateString("en-CA", dateOptions)
+    : undefined;
+
+---
+
+<li class=`${inverted ? 'timeline-inverted' : 'timeline-unverted'} animate-box`>
+    <div class="timeline-badge"><i><img src={icon} /></i></div>
+    <div class="timeline-panel">
+        <div class="timeline-heading">
+            <h3 class="timeline-title">{title}</h3>
+            <span class="company"
+                >{institutionName}
+                <br />
+               {startDateFormatted} - {finishDateFormatted || "Current"}</span
+            >
+        </div>
+        <div class="timeline-body">
+            <p>
+                {description}
+            </p>
+        </div>
+    </div>
+</li>

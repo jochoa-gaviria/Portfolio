@@ -1,0 +1,88 @@
+---
+
+import type { iresumeItem } from '../../interfaces/resumeItem'
+import ResumeItem from './ResumeItem.astro';
+import WorkSVG from '/svg/work.svg';
+
+
+const workExperience: iresumeItem[] = [
+    {
+        title: "FullStack Software Developer",
+        institutionName: "Visionamos",
+        startDate: new Date("2022-03-01T00:00:00Z"),
+        finishDate: undefined,
+        description: "Develop user histories, new features, fix bugs and incidents, Develop test cases, tecnical documentation.",
+        icon: WorkSVG,
+        inverted: false,
+    },
+    {
+        title: "Full-stack Developer",
+        institutionName: "Self-employed",
+        startDate: new Date("2022-06-01T00:00:00Z"),
+        finishDate: new Date("2022-08-01T00:00:00Z"),
+        description: "Build a software for a university, the software allows engineering students and teachers manage their courses, check their exams results and others.",
+        icon: WorkSVG,
+        inverted: true
+    },
+    {
+        title: "Requirements Analiyst IT",
+        institutionName: "Visionamos",
+        startDate: new Date("2020-12-01T00:00:00Z"),
+        finishDate: new Date("2022-02-28T00:00:00Z"),
+        description: "Sprint and Backlogs - Development management, Projects and Requirements analysis, tecnical documentation.",
+        icon: WorkSVG,
+        inverted: false,
+    },
+    {
+        title: "Customer Service Analyst",
+        institutionName: "Visionamos",
+        startDate: new Date("2020-07-01T00:00:00Z"),
+        finishDate: new Date("2020-11-30T00:00:00Z"),
+        description: "Tecnical Support - Level 2, IT Requirements Analysis and Scaling, Support trainer.",
+        icon: WorkSVG,
+        inverted: true,
+    },
+    {
+        title: "Customer Service Auxiliary",
+        institutionName: "Visionamos",
+        startDate: new Date("2018-06-18T00:00:00Z"),
+        finishDate: new Date("2020-06-30T00:00:00Z"),
+        description: "Tecnical Support - Level 1, Adressing to application incidents.",
+        icon: WorkSVG,
+        inverted: false,
+    },
+    {
+        title: "Software Developer",
+        institutionName: "Self-employed",
+        startDate: new Date("2018-03-01T00:00:00Z"),
+        finishDate: new Date("2018-06-20T00:00:00Z"),
+        description: "Inventory management software (S.A.R) on a lawyers office. The software was build using Arduino, RFID cards for representing phisical files.",
+        icon: WorkSVG,
+        inverted: true,
+    }
+];
+
+---
+
+<section>
+    <li class="timeline-heading text-center animate-box">
+        <div>
+            <h3>Work Experience</h3>
+        </div>
+    </li>
+    {
+        workExperience.map(
+            (workItem): iresumeItem => (
+                <ResumeItem
+                    title={workItem.title}
+                    institutionName={workItem.institutionName}
+                    startDate={workItem.startDate}
+                    finishDate={workItem.finishDate}
+                    description={workItem.description}
+                    icon={workItem.icon}
+                    inverted={workItem.inverted}
+                />
+            )
+        )
+    }
+</section>

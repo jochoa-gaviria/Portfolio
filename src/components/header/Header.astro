@@ -1,0 +1,46 @@
+---
+
+import "../../styles/header.css";
+import type { iheader } from '../../interfaces/header'
+import SocialNetworks from "../social-network/SocialNetworks.astro";
+
+export interface Props extends iheader {}
+
+const { name, occupation } = Astro.props;
+
+---
+
+<div id="page">
+    <header
+        id="header"
+        class="cover js-fullheight"
+        role="banner"
+        style="background-image:url(/images/cover_bg_1.jpg);"
+        data-stellar-background-ratio="0.5"
+    >
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-2 text-center">
+                    <div class="display-t js-fullheight">
+                        <div
+                            class="display-tc js-fullheight animate-box"
+                            data-animate-effect="fadeIn"
+                        >
+                            <div
+                                class="profile-thumb"
+                                style="background: url(/images/user.jpg);"
+                            >
+                            </div>
+                            <h1><span>{name}</span></h1>
+                            <h3><span>{occupation}</span></h3>
+                            <p>
+                                <SocialNetworks />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>

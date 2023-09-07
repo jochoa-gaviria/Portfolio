@@ -1,0 +1,58 @@
+---
+import type { iresumeItem } from "../../interfaces/resumeItem";
+import ResumeItem from "./ResumeItem.astro";
+import EducationSVG from "/svg/education.svg";
+
+const formaleducationItems: iresumeItem[] = [
+    {
+        title: "Software Engineer Degree",
+        institutionName: "Instituto Tecnologico Metropolitano (ITM)",
+        startDate: new Date("2020-08-01T00:00:00Z"),
+        finishDate: new Date("2021-10-23T00:00:00Z"),
+        description: undefined,
+        icon: EducationSVG,
+        inverted: false,
+    },
+    {
+        title: "Information System Technology Degree",
+        institutionName: "Instituto Tecnologico Metropolitano (ITM)",
+        startDate: new Date("2015-02-01T00:00:00Z"),
+        finishDate: new Date("2019-06-30T00:00:00Z"),
+        description: undefined,
+        icon: EducationSVG,
+        inverted: true,
+    },
+    {
+        title: "High School Degree",
+        institutionName: "Educational institute Antonio Jose Bernal",
+        startDate: new Date("2008-01-08T00:00:00Z"),
+        finishDate: new Date("2014-12-01T00:00:00Z"),
+        description: undefined,
+        icon: EducationSVG,
+        inverted: false
+    }
+];
+---
+
+<section>
+    <li class="timeline-heading text-center animate-box">
+        <div>
+            <h3>Education</h3>
+        </div>
+    </li>
+    {
+        formaleducationItems.map(
+            (educationItem): iresumeItem => (
+                <ResumeItem
+                    title={educationItem.title}
+                    institutionName={educationItem.institutionName}
+                    startDate={educationItem.startDate}
+                    finishDate={educationItem.finishDate}
+                    description={educationItem.description}
+                    icon={educationItem.icon}
+                    inverted={educationItem.inverted}
+                />
+            )
+        )
+    }
+</section>

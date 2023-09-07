@@ -1,0 +1,25 @@
+---
+
+import '../../styles/services-item.css'
+import type { iservice } from '../../interfaces/services'
+
+
+export default interface Props extends iservice {}
+
+const { title, description, icon } = Astro.props;
+
+---
+
+<div class="col-md-4 text-center">
+    <div class="feature-left">
+        <span class="icon">
+            <i><img src={icon} /></i>
+        </span>
+        <div class="feature-copy">
+            <h3>{title}</h3>
+            <p>
+                {description}
+            </p>
+        </div>
+    </div>
+</div>

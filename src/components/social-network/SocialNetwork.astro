@@ -1,0 +1,14 @@
+---
+
+import "../../styles/social-network.css";
+import type { isocialNetwork } from "../../interfaces/socialNetwork";
+
+export interface Props extends isocialNetwork {}
+
+const { name, icon, url } = Astro.props;
+
+---
+
+<li>
+    <a href={url} target="_blank"><i><img src={icon} alt={name} /></i></a>
+</li>

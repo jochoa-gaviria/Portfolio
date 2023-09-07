@@ -1,0 +1,24 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header/Header.astro";
+import About from "../components/about-me/About.astro";
+import Resume from "../components/resume/Resume.astro";
+import Services from "../components/services/Services.astro";
+import Skills from "../components/skills/Skills.astro"
+
+---
+
+<Layout title="Juan's portfolio">
+    <main>
+        <Header
+            name="Juan David Ochoa"
+            occupation="Full Stack Developer / Sofware Engineer"
+        />
+
+        <About />
+        <Resume />
+        <Services />
+        <Skills />
+    </main>
+</Layout>

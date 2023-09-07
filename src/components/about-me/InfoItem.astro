@@ -1,0 +1,17 @@
+---
+
+import '../../styles/info-item.css'
+import type { iinfoItem } from '../../interfaces/infoItem';
+import CopyClipboardSVG from "../../svg/copy-clipboard.svg";
+
+export interface Props extends iinfoItem {}
+
+const { firstBlock, secondBlock } = Astro.props;
+
+---
+
+<li>
+    <span class="first-block">{firstBlock}</span>
+    <span class="second-block">{secondBlock}</span>
+    <!-- <span><button id='name'><img src={CopyClipboardSVG} /></button></span> -->
+</li>

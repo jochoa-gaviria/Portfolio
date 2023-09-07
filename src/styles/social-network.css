@@ -1,0 +1,29 @@
+.social-icons li a img,
+.social-icons li a img {
+    font-size: 30px;
+}
+
+.social-icons li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -moz-inline-stack;
+    display: inline-block !important;
+    zoom: 1;
+    display: inline;
+}
+
+.social-icons li a {
+    position: relative;
+    display: -moz-inline-stack;
+    display: inline-block !important;
+    zoom: 1;
+    display: inline;
+    color: #FF9000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.social-icons li a img {
+    font-size: 20px;
+}

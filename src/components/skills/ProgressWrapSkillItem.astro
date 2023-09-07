@@ -1,0 +1,27 @@
+---
+import type { iprogressWrapSkillItem } from '../../interfaces/progressWrapSkillItem';
+import '../../styles/progress-wrap-skill-item.css'
+
+
+export interface Props extends iprogressWrapSkillItem { }
+
+const { title, porcent, style } = Astro.props;
+---
+
+<div class="progress-wrap">
+    <h3>
+        <span class="name-left">{title}</span><span class="value-right"
+            >{porcent}%</span>
+    </h3>
+    <div class="progress">
+        <div
+            class=`progress-bar progress-bar-${style} progress-bar-striped active`
+            role="progressbar"
+            aria-valuenow={porcent}
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style=`width: ${porcent}%`
+        >
+        </div>
+    </div>
+</div>
